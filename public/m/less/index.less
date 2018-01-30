@@ -1,0 +1,109 @@
+@import 'base.less';
+
+html,body{
+  height: 100%;
+}
+
+/*主页的主体容器*/
+#wrapper{
+  height: 100%;
+  padding: 45px 0;
+  // overflow: auto;
+  background-color: #fff;
+  >.list{
+    /*导航*/
+    #nav{
+      .mui-row{
+        padding: 10px;
+        >div{
+          >a{
+            display: block;
+            width: 100%;
+            >img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    /*广告*/
+    #banner{
+      padding: 0px 10px;
+
+      >.mui-row{
+        >.right{
+          >a{
+            display: block;
+            width: 100%;
+            >img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    #products{
+      >div{
+        margin-top: 10px;
+        padding: 0 10px;
+      }
+      [class$=area]{
+        .title{
+          display: block;
+          width: 100%;
+          >img{
+            width: 100%;
+          }
+        }
+        .mui-row{
+          >div{
+            a{
+              display: block;
+              width: 100%;
+              >img{
+                width: 100%;
+              }
+            }
+          }
+        }
+        .mui-row{
+          >div{
+            padding: 5px 5px 10px 5px;
+            .product{
+              box-shadow: 0 0 3px #ccc; 
+              padding-bottom: 10px;
+              .product-name{
+                line-height: 18px;
+                padding: 0 10px;
+                height: 36px;
+                overflow: hidden;
+              }
+              .product-price{
+                text-align: center;
+                .now-price{
+                  font-size: 12px;
+                  color: #f30;
+                  margin-right: 10px;
+                }
+                .old-price{
+                  font-size: 12px;
+                  color: #ccc;
+                }
+              }
+              .product-buy{
+                margin-top: 10px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      /* 运动专区 */
+      .sport-area{
+        >.mui-row{
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+}
