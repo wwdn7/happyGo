@@ -31,50 +31,56 @@ input {
 }
 
 img {
-    /* 去除图片对齐3px的问题 */
-    vertical-align: middle;
+  /* 去除图片对齐3px的问题 */
+  vertical-align: middle;
 }
 
 i {
-    font-style: normal;
+  font-style: normal;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
-}
-
-
-/* 公共类名 */
-
-.pull-left {
+  }
+  
+  
+  /* 公共类名 */
+  
+  .pull-left {
     float: left;
-}
-
-.pull-right {
+  }
+  
+  .pull-right {
     float: right;
-}
-
-.clearfix::after {
+  }
+  
+  .clearfix::after {
     content: '';
     display: block;
     clear: both;
     line-height: 0;
     height: 0;
     visibility: hidden;
-}
-
-.bt{
+  }
+  
+  .bt{
     border-top: 1px solid #ccc;
-}
+  }
 .br{
-    border-right: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 .bb{
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .bl{
-    border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
+
+main{
+  padding: 45px 0;
+  height: 100%;
+}
+
 
 // 公共的头部区域样式
 
@@ -87,7 +93,7 @@ h1,h2,h3,h4,h5,h6 {
   background-color: @main-color;
   text-align: center;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   z-index: 999;
   >form{
     margin: 5px 35px 0px 35px;
@@ -113,7 +119,7 @@ h1,h2,h3,h4,h5,h6 {
     position: absolute;
     right: 10px;
     top: 13px;
-
+    color: #fff;
   }
 }
 

@@ -1,0 +1,43 @@
+@import "base.less";
+
+body{
+  background-color: #fff;
+}
+
+#header{
+  >span{
+    line-height: 45px;
+  }
+}
+
+#search{
+  padding-left: 10px;
+  padding-right: 10px;
+  .search-input{
+    padding: 10px 0;
+    position: relative;
+    input[type=search]{
+      text-align: left;
+      padding: 0 60px 0 10px;
+      font-size: 14px;
+      background-color: #fff;
+      border: 1px solid @main-color;
+    }
+    .btn-search{
+      position: absolute;
+      right: 0;
+      top: 10px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: @main-color;
+    }
+  }
+  .search-history{
+    .search-history-title{
+
+    }
+    .search-history-body{
+
+    }
+  }
+}
