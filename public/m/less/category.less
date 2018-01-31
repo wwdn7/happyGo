@@ -1,0 +1,54 @@
+@import "base.less";
+
+
+#category{
+  height: 100%;
+  padding: 45px 0;
+  .category-left{
+    position: absolute;
+    left: 0;
+    top: 45px;
+    >ul{
+      >li{
+        >a{
+          display: block;
+          width: 90px;
+          height: 40px;
+          line-height: 40px;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          font-size: 12px;
+          background-color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .category-right{
+    margin-left: 90px;
+    height: 100%;
+    position: relative; 
+    .mui-scroll-wrapper{
+      padding: 0px 0px 0px 10px;
+      .category-list{
+        position: relative;
+        .mui-row{
+          >div{
+            >a{
+              display: block;
+              width: 100%;
+              >img{
+                width: 100%;
+              }
+              >p{
+                text-align: center;
+                background-color: #fff;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+     }
+  }
+}

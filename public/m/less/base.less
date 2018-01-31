@@ -12,6 +12,10 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html,body{
+  height: 100%;
+}
+
 li {
     list-style: none;
 }
@@ -85,11 +89,27 @@ h1,h2,h3,h4,h5,h6 {
   color: #fff;
   font-size: 18px;
   z-index: 999;
+  >form{
+    margin: 5px 35px 0px 35px;
+    >input{
+      background-color: #fff;
+      text-align: left;
+      font-size: 12px;
+      margin-bottom: 0;
+      border-radius: 3px;
+    }
+  }
+  .fa-arrow-left{
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    color: #fff;
+  }
   >h4{
     line-height: 45px;
     margin: 0;
   };
-  >i{
+  .fa-search{
     position: absolute;
     right: 10px;
     top: 13px;
