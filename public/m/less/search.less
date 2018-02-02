@@ -16,12 +16,14 @@ body{
   .search-input{
     padding: 10px 0;
     position: relative;
+    
     input[type=search]{
       text-align: left;
       padding: 0 60px 0 10px;
       font-size: 14px;
       background-color: #fff;
       border: 1px solid @main-color;
+      margin-bottom: 0;
     }
     .btn-search{
       position: absolute;
@@ -30,14 +32,33 @@ body{
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       background-color: @main-color;
+      border: 1px solid @main-color;
     }
   }
   .search-history{
     .search-history-title{
-
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
     }
     .search-history-body{
+      font-size: 12px;
+      >ul{
+        border-bottom: 1px solid #ccc;
+        >li{
+          border: 1px solid #ccc;
+          border-bottom: none;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 10px;
+          >a{
 
+          }
+          >span{
+            line-height: 30px;
+          }
+        }
+      }
     }
   }
 }
