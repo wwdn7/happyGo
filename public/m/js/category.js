@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
   letao.scroll();
   letao.getCategoryLeft();
   letao.getCategoryRight();
+  letao.addSearchHistory();
 })
 
 
@@ -40,16 +41,45 @@ Letao.prototype = {
       getData(id);
     });
     getData(1);
+
     function getData(id) {
-          $.ajax({
-            url: '/category/querySecondCategory',
-            data: {'id': id},
-            success: function (data) {
-              // console.log(data);
-              var html = template('categoryRightTmp',data);
-              $('.category-right .mui-row').html(html);
-            }
-          })
+      $.ajax({
+        url: '/category/querySecondCategory',
+        data: {
+          'id': id
+        },
+        success: function (data) {
+          // console.log(data);
+          var html = template('categoryRightTmp', data);
+          $('.category-right .mui-row').html(html);
+        }
+      })
     }
+  },
+  addSearchHistory: function () {
+    $('a.fa-search').on('click', function () {
+      
+      var searchData = $('input[type=search]').val();
+      var historyData = JSON.parse(localStorage.getItem('historyData')) || [];
+      if(searchData){
+        var id = 0;
+        if (historyData.length == 0) {
+          id = 1;
+        } else {
+          id = historyData[historyData.length - 1].id + 1;
+        }
+        var historyDataObj = {'id': id, 'searchData': searchData};
+  
+        historyData.push(historyDataObj);
+  
+        //把数组再存到本地 要先转成字符串
+        localStorage.setItem('historyData',JSON.stringify(historyData));
+
+        //最后再跳转到搜索页面
+      }
+
+        window.location.href = 'search.html';
+
+    })
   }
 }
