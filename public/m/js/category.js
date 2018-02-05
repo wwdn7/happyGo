@@ -45,40 +45,49 @@ Letao.prototype = {
     function getData(id) {
       $.ajax({
         url: '/category/querySecondCategory',
+        beforeSend: function () {
+          $('#loading').show();
+        },
         data: {
           'id': id
         },
         success: function (data) {
           // console.log(data);
-          var html = template('categoryRightTmp', data);
-          $('.category-right .mui-row').html(html);
+          setTimeout(function () {
+            var html = template('categoryRightTmp', data);
+            $('.category-right .mui-row').html(html);
+            $('#loading').hide();
+          }, 500);
         }
       })
     }
   },
   addSearchHistory: function () {
     $('a.fa-search').on('click', function () {
-      
-      var searchData = $('input[type=search]').val();
+
+      var search = $('input[type=search]').val();
       var historyData = JSON.parse(localStorage.getItem('historyData')) || [];
-      if(searchData){
+      if (search) {
         var id = 0;
         if (historyData.length == 0) {
           id = 1;
         } else {
           id = historyData[historyData.length - 1].id + 1;
         }
-        var historyDataObj = {'id': id, 'searchData': searchData};
-  
+        var historyDataObj = {
+          'id': id,
+          'search': search
+        };
+
         historyData.push(historyDataObj);
-  
+
         //把数组再存到本地 要先转成字符串
-        localStorage.setItem('historyData',JSON.stringify(historyData));
+        localStorage.setItem('historyData', JSON.stringify(historyData));
 
         //最后再跳转到搜索页面
       }
 
-        window.location.href = 'search.html';
+      window.location.href = 'search.html';
 
     })
   }

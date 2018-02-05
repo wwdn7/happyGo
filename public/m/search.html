@@ -15,13 +15,14 @@
   <!-- category.less -->
   <link rel="stylesheet/less" href="./less/search.less">
   <script src="./lib/less/less.js"></script>
+  <!-- <link rel="stylesheet" href="./less/search.css"> -->
 
 </head>
 
 <body>
   <!-- 头部区域 -->
   <header id="header">
-    <a href="category.html" class="fa fa-arrow-left"></a>
+    <a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
     <span class="title">搜索中心</span>
   </header>
 
@@ -89,7 +90,7 @@
     <ul>
       {{each rows as value i}}
       <li data-id="{{value.id}}">
-        <a data-key="{{value.searchData}}" d href="javascript:;">{{value.searchData}}</a>
+        <a data-key="{{value.searchData}}" d href="javascript:;">{{value.search}}</a>
         <span class="icon_delete fa fa-close mui-pull-right"></span>
       </li>
       {{/each}}

@@ -14,11 +14,11 @@ function Letao() {
 Letao.prototype = {
   addSearchHistory: function () {
     $('.btn-search').on('click', function () {
-      var searchData = $('.search-input input').val();
+      var search = $('.search-input input').val();
       var historyData = JSON.parse(localStorage.getItem('historyData')) || [];
 
       //如果没填输入内容就提示输入
-      if (!searchData) {
+      if (!search) {
         mui.toast('请输入搜索内容', {
           duration: 'long',
           type: 'div'
@@ -34,7 +34,7 @@ Letao.prototype = {
       }
       var historyDataObj = {
         'id': id,
-        'searchData': searchData
+        'search': search
       };
 
       historyData.push(historyDataObj);

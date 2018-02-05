@@ -21,7 +21,7 @@
 <body>
   <!-- 头部区域 -->
   <header id="header">
-    <a href="index.html" class="fa fa-arrow-left"></a>
+    <a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
     <form action="#">
       <input type="search" placeholder="请输入要搜索的商品">
     </form>
@@ -43,6 +43,7 @@
     </div>
     <!-- 右侧分类 -->
     <div class="category-right">
+
       <div class="mui-scroll-wrapper">
         <div class="category-list mui-scroll">
           <div class="mui-row">
@@ -90,7 +91,21 @@
     </div>
   </footer>
 
-
+<!-- //LOADING -->
+<div id="loading">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="object" id="object_one"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_four"></div>
+        <div class="object" id="object_five"></div>
+        <div class="object" id="object_six"></div>
+        <div class="object" id="object_seven"></div>
+        <div class="object" id="object_eight"></div>
+      </div>
+    </div>
+  </div>
 
 
   <script type="text/html" id="categoryLeftTmp">

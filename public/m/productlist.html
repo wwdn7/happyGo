@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索商品列表</title>
+  <!-- 站点图标 -->
+  <link rel="icon" href="./images/favicon.ico">
+  <!-- mui的css -->
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+  <!-- category.less -->
+  <link rel="stylesheet/less" href="./less/productlist.less">
+  <script src="./lib/less/less.js"></script>
+
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header id="header">
+    <a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
+    <span class="title">搜索商品列表</span>
+  </header>
+
+  <!-- 搜索主体 -->
+  <main id="main">
+    <div class="search-input">
+      <form action="#">
+        <input type="search" placeholder="请输入要搜索的商品">
+        <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+      </form>
+    </div>
+    <div class="product-list">
+      <div class="product-list-title">
+        <div class="mui-row">
+          <div class="mui-col-xs-3 active">
+            <a href="#">上架时间
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </div>
+          <div class="mui-col-xs-3">
+            <a href="#">价格
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </div>
+          <div class="mui-col-xs-3">
+            <a href="#">数量
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </div>
+          <div class="mui-col-xs-3">
+            <a href="#">折扣
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="product-list-body">
+        <div class="mui-row">
+          <div class="mui-col-xs-6">
+            <div class="product">
+              <a href="#" class="product-img">
+                <img src="./images/product.jpg" alt="">
+              </a>
+              <div class="product-name">
+                adidas阿迪达斯 男式 场下休闲篮球鞋S83700
+              </div>
+              <div class="product-price">
+                <span class="price-now">¥560.00</span>
+                <del class="price-old">¥888.00</del>
+              </div>
+              <div class="product-buy">
+                <button type="button" class="mui-btn mui-btn-primary ">立即购买</button>
+              </div>
+            </div>
+          </div>
+          <div class="mui-col-xs-6">
+            <div class="product">
+              <a href="#" class="product-img">
+                <img src="./images/product.jpg" alt="">
+              </a>
+              <div class="product-name">
+                adidas阿迪达斯 男式 场下休闲篮球鞋S083700
+              </div>
+              <div class="product-price">
+                <span class="price-now">¥560.00</span>
+                <del class="price-old">¥888.00</del>
+              </div>
+              <div class="product-buy">
+                <button type="button" class="mui-btn mui-btn-primary ">立即购买</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </main>
+
+  <!-- 底部区域 -->
+  <footer id="footer">
+    <div class="mui-row">
+      <div class="mui-col-xs-3">
+        <a href="index.html">
+          <i class="fa fa-home"></i>
+          首页
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="category.html">
+          <i class="fa fa-bars"></i>
+          分类
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          购物车
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="user.html">
+          <i class="fa fa-user"></i>
+          个人中心
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- mui的js -->
+  <script src="./lib/mui/js/mui.js"></script>
+  <!-- 模板引擎 -->
+  <script src="./lib/artTemplate/template.js"></script>
+  <!-- zepto.js -->
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <!-- category.js -->
+  <script src="./js/productlist.js"></script>
+</body>
+
+</html>

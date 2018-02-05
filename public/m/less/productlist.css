@@ -1,0 +1,309 @@
+/* 定义京东主体色变量 */
+/* 清除浏览器的默认样式 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 设置盒模型包含边框 padding和 内容 */
+  box-sizing: border-box;
+  /* 清除移动端点击高亮的背景色 （按住才有用）*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  height: 100%;
+}
+li {
+  list-style: none;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+input {
+  border: 0;
+  outline: 0;
+  color: #000;
+}
+img {
+  /* 去除图片对齐3px的问题 */
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+/* 公共类名 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+main {
+  padding: 45px 0;
+  height: 100%;
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  z-index: 999;
+}
+#header > form {
+  margin: 5px 35px 0px 35px;
+}
+#header > form > input {
+  background-color: #fff;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+#header .fa-arrow-left {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  color: #fff;
+}
+#header > h4 {
+  line-height: 45px;
+  font-size: 16px;
+  margin: 0;
+}
+#header .fa-search {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: #fff;
+}
+#header > span {
+  line-height: 45px;
+}
+/*公共的底部区域样式*/
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  height: 45px;
+  width: 100%;
+  background-color: #006699;
+  z-index: 999;
+}
+#footer .mui-row > div {
+  padding: 8px;
+}
+#footer .mui-row > div > a {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+#footer .mui-row > div > a > i {
+  display: block;
+}
+#footer .mui-row > div.active > a {
+  color: greenyellow;
+}
+/* loading */
+#loading {
+  background-color: #ccc;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  margin-top: 0px;
+  top: 0px;
+  display: none;
+}
+#loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+}
+.object {
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+  position: absolute;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-animation: animate 0.8s infinite;
+  animation: animate 0.8s infinite;
+}
+#object_one {
+  top: 19px;
+  left: 19px;
+}
+#object_two {
+  top: 0px;
+  left: 65px;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+#object_three {
+  top: 19px;
+  left: 111px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+#object_four {
+  top: 65px;
+  left: 130px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+#object_five {
+  top: 111px;
+  left: 111px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+#object_six {
+  top: 130px;
+  left: 65px;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#object_seven {
+  top: 111px;
+  left: 19px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+#object_eight {
+  top: 65px;
+  left: 0px;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+@-webkit-keyframes animate {
+  25% {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  75% {
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes animate {
+  50% {
+    -ms-transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+body {
+  background-color: #fff;
+}
+#main {
+  /* search input */
+  height: 2000px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* 商品列表 */
+}
+#main .search-input {
+  padding: 10px 0;
+  position: relative;
+}
+#main .search-input input[type=search] {
+  text-align: left;
+  padding: 0 60px 0 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #006699;
+  margin-bottom: 0;
+}
+#main .search-input .btn-search {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #006699;
+  border: 1px solid #006699;
+}
+#main .product-list .product-list-title {
+  background-color: #eee;
+  margin-bottom: 10px;
+}
+#main .product-list .product-list-title .mui-row > div {
+  text-align: center;
+}
+#main .product-list .product-list-title .mui-row > div > a {
+  font-size: 12px;
+}
+#main .product-list .product-list-title .mui-row > div.active > a {
+  color: #f40;
+}
+#main .product-list .product-list-body .mui-row > div {
+  padding: 0 3px;
+}
+#main .product-list .product-list-body .mui-row > div .product {
+  box-shadow: 0 0 2px #ccc;
+}
+#main .product-list .product-list-body .mui-row > div .product .product-img {
+  display: block;
+  width: 100%;
+}
+#main .product-list .product-list-body .mui-row > div .product .product-img > img {
+  width: 100%;
+}
+#main .product-list .product-list-body .mui-row > div .product .product-buy {
+  text-align: center;
+}
